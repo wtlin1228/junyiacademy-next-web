@@ -27,20 +27,20 @@ const FooterCopyright = () => {
   const classes = useStyles()
 
   return (
-    <Grid xs={12} md={8} container>
-      <Grid xs={12}>
+    <Grid item xs={12} md={8} container>
+      <Grid item xs={12}>
         <Typography className={classes.copyright} component='p'>
           Junyi Academy is derived originally from Khan Academy, and derived
           from Chengzhi Foundation.
         </Typography>
       </Grid>
-      <Grid xs={12}>
+      <Grid item xs={12}>
         <Typography className={classes.copyright} component='p'>
           More information about Chengzhi Foundation, you can find under:
           http://kistschool.org/.
         </Typography>
       </Grid>
-      <Grid xs={12}>
+      <Grid item xs={12}>
         <Typography className={classes.copyright} component='p'>
           More information about Khan Academy, you can find under:
           https://www.khanacademy.org/.

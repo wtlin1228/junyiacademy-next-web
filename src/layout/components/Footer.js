@@ -51,11 +51,12 @@ const Footer = () => {
   return (
     <footer className={classes.root}>
       <Grid container>
-        <Grid className={classes.top} xs={12} container>
-          <Grid xs={6} md={8} container>
+        <Grid className={classes.top} item xs={12} container>
+          <Grid item xs={6} md={8} container>
             <FooterLinksGroups />
           </Grid>
           <Grid
+            item
             xs={6}
             md={4}
             container
@@ -78,6 +79,7 @@ const Footer = () => {
           </Grid>
         </Grid>
         <Grid
+          item
           className={classes.down}
           xs={12}
           container

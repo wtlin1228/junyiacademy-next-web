@@ -66,7 +66,7 @@ const FooterLinksGroups = () => {
 
   return (
     <>
-      <Grid className={classes.linksGroup} xs={12} md={4} container>
+      <Grid className={classes.linksGroup} item xs={12} md={4} container>
         <div>
           <Typography className={classes.listTitle} component='h3'>
             關於我們
@@ -126,7 +126,7 @@ const FooterLinksGroups = () => {
         </div>
       </Grid>
       <div className={classes.linksGroupDivider} />
-      <Grid className={classes.linksGroup} xs={12} md={4} container>
+      <Grid className={classes.linksGroup} item xs={12} md={4} container>
         <div>
           <Typography className={classes.listTitle} component='h3'>
             相關連結
@@ -186,7 +186,7 @@ const FooterLinksGroups = () => {
         </div>
       </Grid>
       <div className={classes.linksGroupDivider} />
-      <Grid className={classes.linksGroup} xs={12} md={4} container>
+      <Grid className={classes.linksGroup} item xs={12} md={4} container>
         <div>
           <Typography className={classes.listTitle} component='h3'>
             幫助中心
