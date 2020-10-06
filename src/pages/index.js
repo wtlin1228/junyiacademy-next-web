@@ -1,9 +1,9 @@
 import React from 'react'
-import { StudentLayout } from 'src/layout'
+import { StudentLayout } from 'src/packages/layout'
 
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { loginAsync } from 'src/permission/redux'
+import { loginAsync } from 'src/packages/permission/redux'
 
 export default function Index() {
   const dispatch = useDispatch()

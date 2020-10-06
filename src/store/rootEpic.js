@@ -2,7 +2,7 @@ import { combineEpics } from 'redux-observable'
 import { catchError } from 'rxjs/operators'
 
 // epics
-import { epic as permissionEpic } from 'src/permission/redux'
+import { epic as permissionEpic } from 'src/packages/permission/redux'
 
 const epics = [permissionEpic]
 
