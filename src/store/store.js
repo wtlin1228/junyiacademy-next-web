@@ -3,12 +3,12 @@ import { configureStore } from '@reduxjs/toolkit'
 import { createEpicMiddleware } from 'redux-observable'
 import rootReducer from './rootReducer'
 import rootEpic from './rootEpic'
-import { request } from './dependencies'
+import { get, post } from './dependencies'
 
 let store
 
 const initStore = (initialState) => {
-  const epicMiddleware = createEpicMiddleware({ dependencies: { request } })
+  const epicMiddleware = createEpicMiddleware({ dependencies: { get, post } })
 
   const store = configureStore({
     reducer: rootReducer,

@@ -3,28 +3,44 @@ import { createSlice, createAction } from '@reduxjs/toolkit'
 const namespace = 'permission'
 
 const initialState = {
-  foo: '',
+  isLoginProcessing: false,
+  roles: [], // ['admin', 'developer', 'moderator', 'user']
 }
 
 const permissionSlice = createSlice({
   name: namespace,
   initialState,
   reducers: {
-    loginSuccess: (state, action) => {
-      state.foo = action.payload.foo
+    loginAsync: (state) => {
+      state.isLoginProcessing = true
+    },
+    loginSuccess: (state) => {
+      state.isLoginProcessing = false
     },
     loginFailure: (state) => {
-      state.foo = 'login error!!!'
+      state.isLoginProcessing = false
+    },
+    fetchPermissionSuccess: (state, action) => {
+      state.roles = action.payload.roles
+    },
+    fetchPermissionFailure: (state) => {
+      state.roles = initialState.roles
     },
   },
 })
 
 permissionSlice.asyncActions = {
-  loginAsync: createAction(`${namespace}/loginAsync`),
+  fetchPermissionAsync: createAction(`${namespace}/fetchPermissionAsync`),
 }
 
-export const { loginSuccess, loginFailure } = permissionSlice.actions
+export const {
+  loginAsync,
+  loginSuccess,
+  loginFailure,
+  fetchPermissionSuccess,
+  fetchPermissionFailure,
+} = permissionSlice.actions
 
-export const { loginAsync } = permissionSlice.asyncActions
+export const { fetchPermissionAsync } = permissionSlice.asyncActions
 
 export default permissionSlice.reducer

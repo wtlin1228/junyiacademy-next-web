@@ -1,10 +1,4 @@
-export const request = (query) =>
-  new Promise((resolve) => {
-    setTimeout(
-      () =>
-        resolve({
-          foo: query,
-        }),
-      1000
-    )
-  })
+import axios from 'axios'
+
+export const get = (endpoint, query) => axios.get(endpoint, { params: query })
+export const post = (endpoint, query) => axios.post(endpoint, query)

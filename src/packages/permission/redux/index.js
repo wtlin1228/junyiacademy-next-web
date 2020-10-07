@@ -1,7 +1,10 @@
 export {
   default as reducer,
+  loginAsync,
   loginSuccess,
   loginFailure,
-  loginAsync,
+  fetchPermissionAsync,
+  fetchPermissionSuccess,
+  fetchPermissionFailure,
 } from './slice'
 export { default as epic } from './epics'
