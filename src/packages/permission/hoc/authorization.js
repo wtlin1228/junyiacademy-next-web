@@ -8,10 +8,10 @@ import { getAuthToken } from '../utils'
 // assets
 
 // actions
-import { loginAsync, fetchPermissionAsync } from 'src/packages/permission/redux'
+import { loginAsync, fetchPermissionAsync } from 'packages/permission/redux'
 
 // components
-import { BaseLayout } from 'src/packages/layout'
+import { BaseLayout } from 'packages/layout'
 
 // self-defined-components
 

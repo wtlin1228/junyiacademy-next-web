@@ -66,7 +66,11 @@ const Footer = () => {
           >
             <div>語言： 繁 | 簡</div>
             <Grid container direction='column' alignItems='flex-end'>
-              <img className={classes.logo} src='/logo_256.png' alt='logo' />
+              <img
+                className={classes.logo}
+                src='/logo_256.png'
+                alt='footer logo'
+              />
               <img
                 className={classes.windowsStore}
                 src='/windows_store.png'

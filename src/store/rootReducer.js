@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
 // reducers
-import { reducer as permission } from 'src/packages/permission/redux'
+import { reducer as permission } from 'packages/permission/redux'
 
 const rootReducer = combineReducers({ permission })
 

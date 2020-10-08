@@ -5,11 +5,11 @@ import Head from 'next/head'
 // material-ui
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import theme from 'src/styles/theme'
+import theme from 'styles/theme'
 
 // redux
 import { Provider } from 'react-redux'
-import { useStore } from 'src/store/store'
+import { useStore } from 'store/store'
 
 export default function MyApp(props) {
   const { Component, pageProps } = props
