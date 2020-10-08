@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "browserslist": [
     "chrome >= 71",
@@ -36,11 +37,17 @@
     "rxjs": "6.6.3"
   },
   "devDependencies": {
+    "@testing-library/dom": "7.24.5",
+    "@testing-library/jest-dom": "5.11.4",
+    "@testing-library/react": "11.0.4",
+    "babel-jest": "26.5.2",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "7.10.0",
     "eslint-config-prettier": "6.12.0",
+    "eslint-plugin-jest": "24.1.0",
     "eslint-plugin-react": "7.21.2",
     "husky": "4.3.0",
+    "jest": "26.5.2",
     "lint-staged": "10.4.0",
     "prettier": "2.1.2"
   },
