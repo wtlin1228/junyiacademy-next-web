@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -8,7 +9,7 @@ import { getAuthToken } from '../utils'
 // assets
 
 // actions
-import { loginAsync, fetchPermissionAsync } from 'packages/permission/redux'
+import { fetchPermissionAsync } from '../redux'
 
 // components
 import { BaseLayout } from 'packages/layout'
@@ -22,44 +23,35 @@ const Authorization = (allowedRole) => (WrappedComponent) => {
     return {
       permission: useSelector((state) => state.permission),
       fetchPermission: () => dispatch(fetchPermissionAsync()),
-      login: () => dispatch(loginAsync()),
     }
   }
 
   const WithAuthorization = () => {
+    const router = useRouter()
     const isServerSide = typeof window === 'undefined'
 
-    const { permission, fetchPermission, login } = usePermission()
+    const { permission, fetchPermission } = usePermission()
     const authToken = getAuthToken()
     const isAuthenticated = permission.roles.includes(allowedRole)
 
     useEffect(() => {
-      if (!isServerSide && authToken) {
+      if (!isServerSide && authToken && !isAuthenticated) {
         fetchPermission()
       }
-    }, [isServerSide, authToken])
-
-    // TODO(leo.lin): Move login logic into login page
-    useEffect(() => {
-      if (!isServerSide && !authToken) {
-        login()
-      }
-    }, [isServerSide, authToken])
+    }, [isServerSide, authToken, isAuthenticated])
 
     if (isServerSide) {
       return <BaseLayout />
     }
 
     if (!getAuthToken()) {
-      // TODO(leo.lin): Redirect to a real login page
-      return <BaseLayout>Login page</BaseLayout>
+      router.push('/login')
     }
 
     if (isAuthenticated) {
       return <WrappedComponent />
     }
 
-    // TODO(leo.lin): Redirect to a real empty page
     return <BaseLayout />
   }
 
