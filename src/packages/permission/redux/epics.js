@@ -11,7 +11,7 @@ import {
   fetchPermissionAsync,
 } from './slice'
 
-const loginEpic = (action$, state$, { post }) =>
+export const loginEpic = (action$, state$, { post }) =>
   action$.pipe(
     ofType(loginAsync.type),
     switchMap(() =>
@@ -24,7 +24,7 @@ const loginEpic = (action$, state$, { post }) =>
     )
   )
 
-const permissionEpic = (action$, $state, { get }) =>
+export const permissionEpic = (action$, $state, { get }) =>
   action$.pipe(
     ofType(fetchPermissionAsync.type),
     switchMap(() =>
