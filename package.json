@@ -8,13 +8,20 @@
     "start": "next start",
     "test": "jest"
   },
-  "browserslist": [
-    "chrome >= 71",
-    "edge >= 18",
-    "firefox >= 72",
-    "safari >= 9",
-    "> 1%"
-  ],
+  "browserslist": {
+    "production": [
+      "chrome >= 71",
+      "edge >= 18",
+      "firefox >= 72",
+      "safari >= 9",
+      "> 1%"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.31",
     "@fortawesome/free-brands-svg-icons": "5.15.0",
