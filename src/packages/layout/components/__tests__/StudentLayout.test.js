@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import StudentLayout from '../components/StudentLayout'
+import StudentLayout from '../StudentLayout'
 
 describe('StudentLayout', () => {
   it('renders without crashing', () => {
