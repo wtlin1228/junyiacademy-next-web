@@ -8,6 +8,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react",
     "prettier",
     "prettier/react"
   ],
@@ -18,7 +20,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "jest"],
+  "plugins": ["react", "jest", "jest-dom", "testing-library"],
   "rules": {
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
