@@ -9,7 +9,7 @@ import theme from 'styles/theme'
 
 // redux
 import { Provider as StateProvider } from 'react-redux'
-import { initStore } from 'store/store'
+import { initStore } from 'store'
 
 const AllTheProviders = ({ children, initialState }) => {
   const store = initStore(initialState)
@@ -27,12 +27,13 @@ AllTheProviders.propTypes = {
   initialState: PropTypes.object.isRequired,
 }
 
-const customRender = (ui, options) =>
-  render(ui, {
-    wrapper: ({ children }) =>
-      AllTheProviders({ children, initialState: options.initialState }),
-    ...options,
+const customRender = (ui, options) => {
+  const { initialState, ...others } = options
+  return render(ui, {
+    wrapper: ({ children }) => AllTheProviders({ children, initialState }),
+    ...others,
   })
+}
 
 // re-export everything
 export * from '@testing-library/react'
