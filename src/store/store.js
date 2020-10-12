@@ -7,7 +7,7 @@ import { get, post } from './dependencies'
 
 let store
 
-const initStore = (initialState) => {
+export const initStore = (initialState) => {
   const epicMiddleware = createEpicMiddleware({ dependencies: { get, post } })
 
   const store = configureStore({
