@@ -6,12 +6,9 @@ module.exports = {
     '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
   },
   collectCoverageFrom: [
-    '**/*.{js,jsx}',
-    '!**/node_modules/**',
-    '!**/tests/**',
-    '!**/coverage/**',
-    '!**/.next/**',
-    '!jest.config.js',
+    'src/**/*.js',
+    '!src/**/index.js',
+    '!src/**/*.stories.js',
   ],
   coverageThreshold: {
     global: {
