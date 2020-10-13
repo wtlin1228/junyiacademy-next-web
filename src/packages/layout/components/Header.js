@@ -14,6 +14,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // utils
 
 // assets
+import LogoDesktop from '../assets/logo_desktop.png'
+import LogoMobile from '../assets/logo_mobile.png'
 
 // actions
 
@@ -136,14 +138,10 @@ export default function PrimarySearchAppBar() {
         <Toolbar className={classes.toolbar}>
           <div className={classes.toolbarItem}>
             <div className={classes.sectionDesktop}>
-              <img className={classes.logo} src='/logo_256.png' alt='logo' />
+              <img className={classes.logo} src={LogoDesktop} alt='logo' />
             </div>
             <div className={classes.sectionMobile}>
-              <img
-                className={classes.logoMobile}
-                src='/logo_large.png'
-                alt='logo'
-              />
+              <img className={classes.logoMobile} src={LogoMobile} alt='logo' />
             </div>
           </div>
           <div className={classes.toolbarItem}>

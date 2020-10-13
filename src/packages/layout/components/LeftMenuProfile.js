@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography'
 // utils
 
 // assets
+import BadgeExample from '../assets/badge_example.png'
 
 // actions
 
@@ -38,7 +39,7 @@ const LeftMenuProfile = () => {
       direction='column'
       alignItems='center'
     >
-      <Avatar className={classes.badge} alt='badge' src='/badge-example.png' />
+      <Avatar className={classes.badge} alt='badge' src={BadgeExample} />
       <Typography className={classes.text}>Leo.Lin</Typography>
       <Typography className={classes.text}>能量：14,307</Typography>
       <Typography className={classes.text}>精熟：0</Typography>

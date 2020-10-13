@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography'
 // utils
 
 // assets
+import LogoDesktop from '../assets/logo_desktop.png'
+import WindowsStore from '../assets/windows_store.png'
 
 // actions
 
@@ -68,12 +70,12 @@ const Footer = () => {
             <Grid container direction='column' alignItems='flex-end'>
               <img
                 className={classes.logo}
-                src='/logo_256.png'
+                src={LogoDesktop}
                 alt='footer logo'
               />
               <img
                 className={classes.windowsStore}
-                src='/windows_store.png'
+                src={WindowsStore}
                 alt='windows store'
               />
               <Typography className={classes.copyright} component='p'>
