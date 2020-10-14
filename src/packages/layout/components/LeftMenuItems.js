@@ -11,7 +11,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 // actions
 
 // components
-import { BaseNextLink } from 'packages/base'
+import { BaseNextLink } from '@/packages/base'
 
 // self-defined-components
 const LeftMenuItems = ({ navItems }) => (

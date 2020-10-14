@@ -12,7 +12,7 @@ import { getAuthToken } from '../utils'
 import { fetchPermissionAsync } from '../redux'
 
 // components
-import { BaseLayout } from 'packages/layout'
+import { BaseLayout } from '@/packages/layout'
 
 // self-defined-components
 

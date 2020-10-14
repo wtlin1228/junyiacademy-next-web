@@ -1,6 +1,6 @@
 import React from 'react'
-import { StudentLayout } from 'packages/layout'
-import { requireDeveloper } from 'packages/permission'
+import { StudentLayout } from '@/packages/layout'
+import { requireDeveloper } from '@/packages/permission'
 
 function Index() {
   return <StudentLayout>{/* page content start */}</StudentLayout>

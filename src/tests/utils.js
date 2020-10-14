@@ -5,11 +5,11 @@ import { render } from '@testing-library/react'
 // material-ui
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import theme from 'styles/theme'
+import theme from '@/styles/theme'
 
 // redux
 import { Provider as StateProvider } from 'react-redux'
-import { initStore } from 'store'
+import { initStore } from '@/store'
 
 const AllTheProviders = ({ children, initialState }) => {
   const store = initStore(initialState)
