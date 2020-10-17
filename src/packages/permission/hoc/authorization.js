@@ -26,12 +26,12 @@ const Authorization = (allowedRole) => (WrappedComponent) => {
     }
   }
 
-  const WithAuthorization = () => {
+  const WithAuthorization = ({ serverSideAuthToken }) => {
     const router = useRouter()
     const isServerSide = typeof window === 'undefined'
 
     const { permission, fetchPermission } = usePermission()
-    const authToken = getAuthToken()
+    const authToken = serverSideAuthToken || getAuthToken()
     const isAuthenticated = permission.roles.includes(allowedRole)
 
     useEffect(() => {
@@ -40,11 +40,7 @@ const Authorization = (allowedRole) => (WrappedComponent) => {
       }
     }, [isServerSide, authToken, isAuthenticated])
 
-    if (isServerSide) {
-      return <BaseLayout />
-    }
-
-    if (!getAuthToken()) {
+    if (!isServerSide && !authToken) {
       router.push('/login')
     }
 
@@ -53,6 +49,10 @@ const Authorization = (allowedRole) => (WrappedComponent) => {
     }
 
     return <BaseLayout />
+  }
+
+  WithAuthorization.propTypes = {
+    serverSideAuthToken: PropTypes.string.isRequired,
   }
 
   return WithAuthorization

@@ -29,7 +29,10 @@ export const permissionEpic = (action$, $state, { get }) =>
     ofType(fetchPermissionAsync.type),
     switchMap(() =>
       from(get('/api/permission', {})).pipe(
-        map((response) => fetchPermissionSuccess(response.data)),
+        map((response) => {
+          console.log(response)
+          return fetchPermissionSuccess(response.data)
+        }),
         catchError((error) => of(fetchPermissionFailure(error)))
       )
     )

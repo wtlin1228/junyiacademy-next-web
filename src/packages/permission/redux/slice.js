@@ -21,6 +21,7 @@ const permissionSlice = createSlice({
       state.isLoginProcessing = false
     },
     fetchPermissionSuccess: (state, action) => {
+      console.log(action)
       state.roles = action.payload.roles
     },
     fetchPermissionFailure: (state) => {
