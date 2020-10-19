@@ -20,7 +20,7 @@ And we could discuss which topic(s) you are interested in.
 4.  Create a branch for your MR with `git checkout -b mr/your-branch-name`
 
 > Tip: Keep your `master` branch pointing at the original repository and make
-> pull requests from branches on your fork. To do this, run:
+> merge requests from branches on your fork. To do this, run:
 >
 > ```
 > git remote add upstream https://gitlab.com:junyiacademy/junyifrontend.git
@@ -31,7 +31,7 @@ And we could discuss which topic(s) you are interested in.
 > This will add the original repository as a "remote" called "upstream". Then
 > fetch the git information from that remote, then set your local `master`
 > branch to use the upstream master branch whenever you run `git pull`. Then you
-> can make all of your pull request branches based on this `master` branch.
+> can make all of your merge request branches based on this `master` branch.
 > Whenever you want to update your version of `master`, do a regular `git pull`.
 
 ## Committing and Pushing changes
