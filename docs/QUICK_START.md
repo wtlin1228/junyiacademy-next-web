@@ -52,4 +52,4 @@ export async function getServerSideProps({ req }) {
 
 ## Create New Package
 
-To create a package <YOUR_PACKAGE_NAME>, run `$ npm run init:package -- <YOUR_PACKAGE_NAME>`.
+To create a package, run `$ npm run init:package -- <YOUR_PACKAGE_NAME>`.
