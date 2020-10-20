@@ -39,7 +39,6 @@
 ## Package folder
 
 **Note:** Packages should be placed under `/src/packages/`.
-{: .note}
 
 ```
 .
