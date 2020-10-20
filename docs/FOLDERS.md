@@ -14,6 +14,7 @@
 ├── jest.config.js
 ├── coverage/ (Coverage report from jest)
 ├── docs/
+├── scripts/ (Convenient scripts)
 └── src
     ├── pages/
     │   ├── _app.js
@@ -42,6 +43,8 @@
 
 ```
 .
+├── __mocks__/
+├── __tests__/
 ├── assets/
 ├── components/ (`index.js` exports components which will be used by other packages)
 ├── containers/ (`index.js` exports containers which will be used by other packages)
