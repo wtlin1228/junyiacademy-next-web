@@ -23,7 +23,7 @@
     │   ├── rootEpic.js
     │   ├── rootReducer.js
     │   ├── store.js (Redux store)
-    │   └── index.js (Export factor functions for create store)
+    │   └── index.js (Export factor functions for creating store)
     ├── styles/ (Material UI global theme)
     ├── tests/
     │   ├── setupTests.js (Jest setupFilesAfterEnv)
