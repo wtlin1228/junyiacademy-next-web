@@ -44,13 +44,13 @@
 ```
 .
 ├── assets/
-├── components/ (`index.js` exports components which will be exported by `../index.js`)
-├── containers/ (`index.js` exports containers which will be exported by `../index.js`)
+├── components/ (`index.js` exports components which will be used by other packages)
+├── containers/ (`index.js` exports containers which will be used by other packages)
 ├── hoc/
 ├── redux/
 │   ├── epics.js
 │   ├── slice.js (Slice created by @reduxjs/toolkit)
 │   └── index.js (Export reducer, actions and epic)
 ├── utils/
-└── index.js (Export reducer, epic and react components)
+└── index.js (Export what we need which is not exported by `index.js` in components, containers and redux)
 ```
