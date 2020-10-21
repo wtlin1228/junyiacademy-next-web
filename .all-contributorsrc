@@ -1,0 +1,26 @@
+{
+  "projectName": "junyiacademy-next-web",
+  "projectOwner": "wtlin1228",
+  "repoType": "github",
+  "repoHost": "",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "wtlin1228",
+      "name": "Leo",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/16910748?v=4",
+      "profile": "https://github.com/wtlin1228",
+      "contributions": [
+        "code",
+        "doc",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

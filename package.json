@@ -58,6 +58,7 @@
     "@testing-library/dom": "7.24.5",
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/react": "11.0.4",
+    "all-contributors-cli": "6.19.0",
     "babel-jest": "26.5.2",
     "babel-loader": "8.1.0",
     "cz-conventional-changelog": "3.3.0",
